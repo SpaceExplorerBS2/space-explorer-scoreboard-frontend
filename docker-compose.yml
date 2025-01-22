@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1:7214"
+    environment:
+      - PORT=7214
+    restart: unless-stopped 
